@@ -1,0 +1,86 @@
+// ===========================
+// colors
+$color-1: #C23E2F;
+$color-1-lt: lighten($color-1, 45%);
+$black: #191919;
+$white: #fff;
+$gray-10: darken($white, 10%);
+$gray-20: darken($white, 20%);
+$gray-30: darken($white, 30%);
+$gray-40: darken($white, 40%);
+$gray-50: darken($white, 50%);
+$gray-60: darken($white, 60%);
+$gray-70: darken($white, 70%);
+$gray-80: darken($white, 80%);
+$gray-90: darken($white, 90%);
+
+.color-1 { color: $color-1; }
+.gray-30 { color: $gray-30; }
+
+// ===========================
+// background-colors
+.bg-white { background-color: $white; }
+.bg-color-1 { background-color: $color-1; }
+.bg-color-1-lt { background-color: $color-1-lt; }
+
+.bg-gray-80 { 
+  background-color: $gray-80;
+}
+.bg-pattern { 
+  background: url('assets/images/what-the-hex.png') 0 0 repeat; 
+}
+
+// ===========================
+// font-families
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,500,700|Viga|Roboto:900');
+$font-1: 'IBM Plex Sans', Helvetica, sans-serif;
+$font-2: 'Viga', Helvetica, sans-serif;
+$font-3: 'Roboto', Helvetica, sans-serif;
+
+// ===========================
+// font-sizes
+$fz-base: 1rem;
+
+$fz-sm: $fz-base;
+$fz-md: $fz-base * 1.125; // 18px
+$fz-lg: $fz-base * 1.375; // 22px
+$fz-xl: $fz-base * 1.75; // 28px
+$fz-xxl: $fz-base * 2.5; // 40px
+$fz-xxxl: $fz-base * 3.75; // 60px
+
+.fz-sm { font-size: $fz-sm; }
+.fz-md { font-size: $fz-md; }
+.fz-lg { font-size: $fz-lg; }
+.fz-xl { font-size: $fz-xl; }
+.fz-xxl { font-size: $fz-xxl; }
+.fz-xxl { font-size: $fz-xxl; }
+
+// ===========================
+// transitions
+$tran: 0.2s all ease-in-out;
+
+// ===========================
+// BOOTSTRAP
+// spacers
+
+// padding
+.pt-6, .py-6 { padding-top: 60px !important; }
+.pb-6, .py-6 { padding-bottom: 60px !important; }
+.pr-6, .px-6 { padding-right: 60px !important; }
+.pl-6, .px-6 { padding-left: 60px !important; }
+// margin
+.mt-6, .my-6 { margin-top: 60px !important; }
+.mb-6, .my-6 { margin-bottom: 60px !important; }
+.mr-6, .mx-6 { margin-right: 60px !important; }
+.ml-6, .mx-6 { margin-left: 60px !important; }
+
+// padding
+.pt-8, .py-8 { padding-top: 80px !important; }
+.pb-8, .py-8 { padding-bottom: 80px !important; }
+.pr-8, .px-8 { padding-right: 80px !important; }
+.pl-8, .px-8 { padding-left: 80px !important; }
+// margin
+.mt-8, .my-8 { margin-top: 80px !important; }
+.mb-8, .my-8 { margin-bottom: 80px !important; }
+.mr-8, .mx-8 { margin-right: 80px !important; }
+.ml-8, .mx-8 { margin-left: 80px !important; }

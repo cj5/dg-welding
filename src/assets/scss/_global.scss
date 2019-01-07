@@ -1,0 +1,96 @@
+#app {
+  font-family: $font-1;
+  font-weight: 400;
+  color: $gray-80;
+  font-size: $fz-md;
+  h1,h2,h3,h4,h5,h6 {
+    text-transform: uppercase;
+    font-weight: bold;
+    color: $color-1;
+  }
+  li {
+    margin-bottom: 10px;
+  }
+  img {
+    width: 100%;
+  }
+  nav {
+    position: relative;
+    height: 100px;
+    li {
+      margin-left: 30px;
+      margin-bottom: 0;
+      a {
+        color: $color-1;
+        font-weight: 500;
+        font-size: 1.25rem;
+        border-bottom: 2px solid transparent;
+        padding-bottom: 4px;
+        transition: $tran;
+        &:hover {
+          border-bottom: 2px solid $color-1;
+        }
+      }
+    }
+  }
+  .bold { font-weight: bold; }
+  .italic { font-style: italic; }
+  .logo, a {
+    height: 100%;
+    img {
+      max-height: 80%;
+      width: auto;
+    }
+  }
+  .hero {
+    position: relative;
+    width: 100%;
+    background: url('assets/images/hero-2.jpg') 0 0 no-repeat;
+    background-size: cover;
+    height: 500px;
+    .filter {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba($black, 0.4);
+    }
+    $heading-spacing: 0px;
+    .hero-heading {
+      display: inline-block;
+      font-family: $font-1;
+      color: $white;
+      font-size: 5rem;
+      line-height: 38px;
+      // font-style: italic;
+      letter-spacing: $heading-spacing;
+      word-spacing: $heading-spacing;
+      position: relative;
+      z-index: 9;
+    }
+  }
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+    p {
+      margin-bottom: 1rem;
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+  .img-left,
+  .img-right {
+    position: absolute;
+    width: 50%;
+  }
+  .img-left {
+    left: 0;
+    top: 0;
+  }
+  .img-right {
+    right: 0;
+    bottom: 0;
+  }
+} // #app

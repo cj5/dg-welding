@@ -1,0 +1,23 @@
+#app {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+  a:hover {
+    text-decoration: none;
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  [class*='border'] {
+    border-width: 2px !important;
+    border-color: $gray-30 !important;
+  }
+}
