@@ -1,9 +1,11 @@
 // ===========================
 // colors
 $color-1: #C23E2F;
-$color-1-lt: lighten($color-1, 45%);
+$color-1-lt: lighten($color-1, 30%);
+$color-1-x-lt: lighten($color-1, 48%);
 $black: #191919;
 $white: #fff;
+$gray-7: darken($white, 7%);
 $gray-10: darken($white, 10%);
 $gray-20: darken($white, 20%);
 $gray-30: darken($white, 30%);
@@ -56,8 +58,13 @@ $fz-xxxl: $fz-base * 3.75; // 60px
 .fz-xxl { font-size: $fz-xxl; }
 
 // ===========================
+// borders
+$border: 2px solid $gray-30;
+
+// ===========================
 // transitions
 $tran: 0.2s all ease-in-out;
+$tran4: 0.4s all ease-in-out;
 
 // ===========================
 // BOOTSTRAP

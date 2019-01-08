@@ -1,18 +1,48 @@
+html {
+  overflow-x: hidden;
+}
 #app {
   font-family: $font-1;
-  font-weight: 400;
+  font-weight: 500;
   color: $gray-80;
-  font-size: $fz-md;
+  font-size: $fz-sm;
   h1,h2,h3,h4,h5,h6 {
     text-transform: uppercase;
     font-weight: bold;
     color: $color-1;
+  }
+  h3 { font-size: $fz-lg; }
+  h4 { 
+    font-size: $fz-md;
+    font-weight: 500;
+    color: $gray-80;
+    text-transform: unset;
+  }
+  a {
+    color: $color-1;    
+    transition: $tran;
+    &:hover {
+      color: $gray-80;
+    }
   }
   li {
     margin-bottom: 10px;
   }
   img {
     width: 100%;
+  }
+  .pseudo-underline {
+    position: relative;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 4rem;
+      height: 2px;
+      background: $gray-30;
+      bottom: -24px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
   }
   nav {
     position: relative;
@@ -21,13 +51,13 @@
       margin-left: 30px;
       margin-bottom: 0;
       a {
-        color: $color-1;
+        color: $gray-80;
         font-weight: 500;
         font-size: 1.25rem;
         border-bottom: 2px solid transparent;
         padding-bottom: 4px;
-        transition: $tran;
         &:hover {
+          color: $color-1;
           border-bottom: 2px solid $color-1;
         }
       }
@@ -40,6 +70,23 @@
     img {
       max-height: 80%;
       width: auto;
+    }
+  }
+  .header {
+    .top-bar {
+      background-color: $gray-80;
+      padding: 6px 0;
+      a {
+        color: $white;
+        padding: 0;
+        border: none;
+        &:hover {
+          color: $color-1-lt;
+        }
+      }
+    }
+    .header-border {
+      border: 2px solid $color-1 !important;
     }
   }
   .hero {
@@ -58,16 +105,18 @@
     }
     $heading-spacing: 0px;
     .hero-heading {
-      display: inline-block;
+      left: 150%;
       font-family: $font-1;
       color: $white;
       font-size: 5rem;
-      line-height: 38px;
-      // font-style: italic;
+      line-height: 54px;
       letter-spacing: $heading-spacing;
       word-spacing: $heading-spacing;
       position: relative;
       z-index: 9;
+      transition: $tran4;
+      .heading-a { line-height: 64px; }
+      .heading-b { line-height: 28px; }
     }
   }
   .content {
@@ -79,6 +128,35 @@
         margin-bottom: 0;
       }
     }
+  }
+  .module {
+    display: inline-block;
+    background-color: $white;
+    padding: 1rem 1rem 2.25rem;
+    border: $border;
+    text-align: center;
+    h3 {
+      margin: 30px 0 20px;
+      color: $gray-80;
+      font-style: italic;
+    }
+    .img-wrapper {
+      overflow: hidden;
+    }
+    img {
+      width: 100%;
+      transition: $tran;
+    }
+    a {
+      border-bottom: none;
+      padding: 0;
+    }
+    &:hover {
+      background-color: $gray-7;
+    }
+  }
+  .module:hover img {
+    transform: scale(1.05);
   }
   .img-left,
   .img-right {
