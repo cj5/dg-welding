@@ -5,7 +5,7 @@
       <div class="container">
           <h1 class="hero-heading d-flex flex-column">
             <span class="heading-a mb-2">DG Welding</span>
-            <span class="heading-b fz-xl italic gray-30">and Mfg.</span>
+            <span class="heading-b fz-xl italic gray-20">and Mfg.</span>
           </h1>
       </div>
     </div>
@@ -17,7 +17,7 @@
     <section class="py-8">
       <div class="container text-center">
         <h2 class="mb-5 pseudo-underline">Core Values</h2>
-        <ul class="fz-lg d-inline-block mb-3">
+        <ul class="fz-lg d-inline-block mb-2">
           <li>Exceed expectations</li>
           <li>Go the extra mile</li>
           <li>Exemplify integrity</li>
