@@ -5,7 +5,7 @@
       <div class="container">
           <h1 class="hero-heading d-flex flex-column">
             <span class="heading-a mb-2">DG Welding</span>
-            <span class="heading-b fz-xl italic gray-20">and Mfg.</span>
+            <span class="heading-b fz-xl italic gray-20">&amp; Mfg.</span>
           </h1>
       </div>
     </div>
@@ -36,9 +36,27 @@
               <h2 class="mb-5">Contact</h2>
               <h4 class="mb-4">Located right off of 13 and Yankee Doodle in Eagan, MN</h4>
               <div class="d-flex flex-column">
-                <a href="#" class="mb-2">&#9873; 3265 Sun Drive, Eagan MN 55121</a>
-                <a href="#" class="mb-2">&#9743; 651-688-2358</a>
-                <a href="mailto:info@dg-welding.com">@ info@dg-welding</a>
+                <a href="#" class="mb-2">
+                  <LocationIcon />
+                  <span class="icon-wrapper">
+                    <svg class="icon icon-location"><use xlink:href="#icon-location"></use></svg>
+                  </span>
+                  3265 Sun Drive, Eagan MN 55121
+                </a>
+                <a href="#" class="mb-2">
+                  <PhoneIcon />
+                  <span class="icon-wrapper">
+                    <svg class="icon icon-phone"><use xlink:href="#icon-phone"></use></svg>
+                  </span>
+                  651-688-2358
+                </a>
+                <a href="mailto:info@dg-welding.com">
+                  <EmailIcon />
+                  <span class="icon-wrapper">
+                    <svg class="icon icon-mail"><use xlink:href="#icon-mail"></use></svg>
+                  </span>
+                  info@dg-welding
+                </a>
               </div>
             </div>
           </div>
@@ -54,11 +72,17 @@
 
 <script>
 import CarouselOurServices from './CarouselOurServices';
+import LocationIcon from './svg/LocationIcon';
+import PhoneIcon from './svg/PhoneIcon';
+import EmailIcon from './svg/EmailIcon';
 
 export default {
   name: "HomePage",
   components: {
-    CarouselOurServices
+    CarouselOurServices,
+    LocationIcon,
+    PhoneIcon,
+    EmailIcon
   },
   methods: {
     shiftHeading() {
