@@ -2,20 +2,22 @@
   <div>
     <div class="container pb-8">
       <h2 class="pt-6 mb-6">Gallery</h2>
-      <div class="carousel-wrapper gallery">
-        <swiper :options="carouselOptions" ref="carousel">
+      <!-- <div class="bg-black py-5"> -->
+        <div class="carousel-wrapper gallery">
+          <swiper :options="carouselOptions" ref="carousel">
 
-          <swiper-slide v-for="(item, key) in images" :key="key">
-            <div class="border">
-              <img :src="imageSrc(key)" :alt="item.alt">
-            </div>
-          </swiper-slide>
+            <swiper-slide v-for="(item, key) in images" :key="key">
+              <div class="border">
+                <img :src="imageSrc(key)" :alt="item.alt">
+              </div>
+            </swiper-slide>
 
-        </swiper>
-        <!-- <div class="swiper-pagination"  slot="pagination"></div> -->
-        <div class="swiper-arrow swiper-button-prev" slot="button-prev"></div>
-        <div class="swiper-arrow swiper-button-next" slot="button-next"></div>
-      </div>
+          </swiper>
+          <!-- <div class="swiper-pagination"  slot="pagination"></div> -->
+          <div class="swiper-arrow swiper-button-prev" slot="button-prev"></div>
+          <div class="swiper-arrow swiper-button-next" slot="button-next"></div>
+        </div>
+      <!-- </div> -->
     </div>
     <Contact />
   </div>

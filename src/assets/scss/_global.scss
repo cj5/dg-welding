@@ -53,7 +53,7 @@ html {
     position: relative;
     height: 100px;
     li {
-      margin-left: 30px;
+      margin-right: 30px;
       margin-bottom: 0;
       a {
         color: $gray-80;
@@ -71,6 +71,9 @@ html {
             color: $gray-80;
           }
         }
+      }
+      &:last-child {
+        margin-right: 0;
       }
     }
   }
@@ -274,6 +277,8 @@ html {
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
+    position: relative;
+    bottom: 2px;
   }
   .icon-mail {
     width: 20px;
