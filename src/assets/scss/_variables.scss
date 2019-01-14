@@ -25,13 +25,10 @@ $gray-90: darken($white, 90%);
 .bg-white { background-color: $white; }
 .bg-color-1 { background-color: $color-1; }
 .bg-color-1-lt { background-color: $color-1-lt; }
-
-.bg-gray-80 { 
-  background-color: $gray-80;
-}
-.bg-pattern { 
-  background: url('assets/images/what-the-hex.png') 0 0 repeat; 
-}
+.bg-gray-10 { background-color: $gray-10; }
+.bg-gray-80 { background-color: $gray-80; }
+.bg-black { background-color: $black; }
+.bg-pattern { background: url('assets/images/what-the-hex.png') 0 0 repeat; }
 
 // ===========================
 // font-families

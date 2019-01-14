@@ -17,19 +17,29 @@
     </div>
     <div class="container">
       <nav class="d-flex align-items-center justify-content-between">
+        <div class="nav-links">
+          <ul class="d-flex">
+            <li>
+              <router-link to="/" active-class="active" exact>Home</router-link>
+            </li>
+            <li>
+              <router-link to="/about" active-class="active">About</router-link>
+            </li>
+            <li>
+              <router-link to="/history" active-class="active">History</router-link>
+            </li>
+            <li>
+              <router-link to="/gallery" active-class="active">Gallery</router-link>
+            </li>
+            <li>
+              <router-link to="/contact" active-class="active">Contact</router-link>
+            </li>
+          </ul>
+        </div>
         <div class="logo">
           <a href="#" class="d-flex align-items-center">
             <img src="../assets/images/logo.png" alt="company logo">
           </a>
-        </div>
-        <div class="nav-links">
-          <ul class="d-flex">
-            <li><a href="#" class="active">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Gallery</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">History</a></li>
-          </ul>
         </div>
       </nav>
     </div>

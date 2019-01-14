@@ -1,5 +1,5 @@
 <template>
-  <section class="py-6 bg-pattern">
+  <section class="py-6">
     <div class="container">
       <h2 class="mb-5">Our Services</h2>
       <div class="carousel-wrapper mb-4">
@@ -124,7 +124,7 @@ export default {
         spaceBetween: 30,
         loop: true,
         autoplay: {
-          delay: 3000,
+          delay: 6000,
           disableOnInteraction: false
         },
         pagination: {
@@ -144,7 +144,7 @@ export default {
     }
   },
   mounted() {
-    console.log('this is current swiper instance object', this.swiper)
+    // console.log('this is current swiper instance object', this.swiper)
     this.swiper.slideTo(3, 1000, false)
   }
 }
