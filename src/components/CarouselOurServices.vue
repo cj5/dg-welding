@@ -4,97 +4,17 @@
       <h2 class="mb-5">Our Services</h2>
       <div class="carousel-wrapper mb-4">
         <swiper :options="carouselOptions" ref="carousel">
-          <!-- SLIDE 1 -->
-          <swiper-slide>
-            <a href="#" class="module module-1">
-              <div class="img-wrapper">
-                <img src="../assets/images/fence-2.jpg" alt="">
-              </div>  
-              <h3>Steel fabrications</h3>
-              <a href="#">Click to view project gallery</a>
-            </a>
-          </swiper-slide>
-          <!-- SLIDE 2 -->
-          <swiper-slide>
-            <a href="#" class="module module-2">
-              <div class="img-wrapper">
-                <img src="../assets/images/custom-corkscrew-2.jpg" alt="">
-              </div>  
-              <h3>Miscellaneous steels</h3>
-              <a href="#">Click to view project gallery</a>
-            </a>
-          </swiper-slide>
-          <!-- SLIDE 3 -->
-          <swiper-slide>
-            <a href="#" class="module module-3">
-              <div class="img-wrapper">
-                <img src="../assets/images/fence-2.jpg" alt="">
-              </div>  
-              <h3>Structural steel</h3>
-              <a href="#">Click to view project gallery</a>
-            </a>
-          </swiper-slide>
-
-          <!-- SLIDE 4 -->
-          <swiper-slide>
-            <a href="#" class="module module-1">
-              <div class="img-wrapper">
-                <img src="../assets/images/fence-2.jpg" alt="">
-              </div>  
-              <h3>Installation</h3>
-              <a href="#">Click to view project gallery</a>
-            </a>
-          </swiper-slide>
-          <!-- SLIDE 5 -->
-          <swiper-slide>
-            <a href="#" class="module module-2">
-              <div class="img-wrapper">
-                <img src="../assets/images/custom-corkscrew-2.jpg" alt="">
-              </div>  
-              <h3>Ornamental development</h3>
-              <a href="#">Click to view project gallery</a>
-            </a>
-          </swiper-slide>
-          <!-- SLIDE 6 -->
-          <swiper-slide>
-            <a href="#" class="module module-3">
-              <div class="img-wrapper">
-                <img src="../assets/images/fence-2.jpg" alt="">
-              </div>  
-              <h3>Repairs</h3>
-              <a href="#">Click to view project gallery</a>
-            </a>
-          </swiper-slide>
-
-          <!-- SLIDE 7 -->
-          <swiper-slide>
-            <a href="#" class="module module-1">
-              <div class="img-wrapper">
-                <img src="../assets/images/fence-2.jpg" alt="">
-              </div>  
-              <h3>Blackened steel</h3>
-              <a href="#">Click to view project gallery</a>
-            </a>
-          </swiper-slide>
-          <!-- SLIDE 8 -->
-          <swiper-slide>
-            <a href="#" class="module module-2">
-              <div class="img-wrapper">
-                <img src="../assets/images/custom-corkscrew-2.jpg" alt="">
-              </div>  
-              <h3>UltraLox</h3>
-              <a href="#">Click to view project gallery</a>
-            </a>
-          </swiper-slide>
-          <!-- SLIDE 9 -->
-          <swiper-slide>
-            <a href="#" class="module module-3">
-              <div class="img-wrapper">
-                <img src="../assets/images/fence-2.jpg" alt="">
-              </div>  
-              <h3>Custom design &amp; fab</h3>
-              <a href="#">Click to view project gallery</a>
-            </a>
+          
+          <swiper-slide v-for="(item, key) in slides" :key="key">
+            <div class="module">
+              <router-link to="/gallery">
+                <div class="img-wrapper">
+                  <img :src="imageSrc(key)" :alt="item.imgAlt">
+                </div>
+                <h3>{{ item.title }}</h3>
+                <a>Click to view project gallery</a>
+              </router-link>
+            </div>
           </swiper-slide>
 
         </swiper>
@@ -118,6 +38,17 @@ export default {
   },
   data() {
     return {
+      slides: [
+        { imgSrc: 'fence.jpg', imgAlt: 'alt', title: 'Steel Fabrications' },
+        { imgSrc: 'corkscrew.jpg', imgAlt: 'alt', title: 'Miscellaneous Steels' },
+        { imgSrc: 'base.jpg', imgAlt: 'alt', title: 'Structural Steel' },
+        { imgSrc: 'fence-4.jpg', imgAlt: 'alt', title: 'Installation' },
+        { imgSrc: 'fence-3-doors.jpg', imgAlt: 'alt', title: 'Ornamental Development' },
+        { imgSrc: 'employee-2.jpg', imgAlt: 'alt', title: 'Repairs' },
+        { imgSrc: 'fence-2.jpg', imgAlt: 'alt', title: 'Blackened Steel' },
+        { imgSrc: 'stairs-2.jpg', imgAlt: 'alt', title: 'Ultralox' },
+        { imgSrc: 'stairs-custom.jpg', imgAlt: 'alt', title: 'Custom Design & Fab' },
+      ],
       carouselOptions: {
         slidesPerView: 3,
         slidesPerGroup: 3,
@@ -136,6 +67,11 @@ export default {
           prevEl: '.swiper-button-prev'
         }
       }
+    }
+  },
+  methods: {
+    imageSrc(i) {
+      return require('../assets/images/gallery/' + this.slides[i].imgSrc); 
     }
   },
   computed: {

@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="container pb-8">
+      <div class="content">
       <h2 class="pt-6 mb-6">Gallery</h2>
-      <!-- <div class="bg-black py-5"> -->
         <div class="carousel-wrapper gallery">
           <swiper :options="carouselOptions" ref="carousel">
 
@@ -13,11 +13,10 @@
             </swiper-slide>
 
           </swiper>
-          <!-- <div class="swiper-pagination"  slot="pagination"></div> -->
           <div class="swiper-arrow swiper-button-prev" slot="button-prev"></div>
           <div class="swiper-arrow swiper-button-next" slot="button-next"></div>
         </div>
-      <!-- </div> -->
+      </div>
     </div>
     <Contact />
   </div>
