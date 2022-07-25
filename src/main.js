@@ -30,6 +30,10 @@ const router = new VueRouter({
   mode: 'history'
 });
 
+Vue.prototype.$link_facebook = 'https://www.facebook.com/dgwelding'
+Vue.prototype.$link_email = 'info@dg-welding.com'
+Vue.prototype.$link_phone = '651-688-2358'
+
 Vue.config.productionTip = false
 
 new Vue({

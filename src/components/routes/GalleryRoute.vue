@@ -28,7 +28,7 @@ import 'swiper/dist/css/swiper.css'
 import { swiper, swiperSlide } from 'vue-awesome-swiper'
 
 export default {
-  name: "Gallery",
+  name: 'GalleryRoute',
   components: {
     Contact,
     swiper,
@@ -48,40 +48,40 @@ export default {
         }
       },
       images: [
-        { 
+        {
           image: 'fence.jpg',
-          alt: 'image' 
+          alt: 'image'
         },
-        { 
-          image: 'fence-doors.jpg', 
-          alt: 'image' 
+        {
+          image: 'fence-doors.jpg',
+          alt: 'image'
         },
-        { 
-          image: 'fence-2.jpg', 
-          alt: 'image' 
+        {
+          image: 'fence-2.jpg',
+          alt: 'image'
         },
-        { 
-          image: 'fence-3.jpg', 
-          alt: 'image' 
+        {
+          image: 'fence-3.jpg',
+          alt: 'image'
         },
-        { 
-          image: 'fence-3-doors.jpg', 
-          alt: 'image' 
+        {
+          image: 'fence-3-doors.jpg',
+          alt: 'image'
         },
-        { 
-          image: 'fence-4.jpg', 
-          alt: 'image' 
+        {
+          image: 'fence-4.jpg',
+          alt: 'image'
         },
-        { 
-          image: 'fence-4-door.jpg', 
-          alt: 'image' 
+        {
+          image: 'fence-4-door.jpg',
+          alt: 'image'
         },
       ]
     }
   },
   methods: {
     imageSrc(i) {
-      return require('../../assets/images/gallery/' + this.images[i].image); 
+      return require('../../assets/images/gallery/' + this.images[i].image);
     }
   }
 }
