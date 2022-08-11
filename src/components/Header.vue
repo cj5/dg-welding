@@ -1,5 +1,5 @@
 <template>
-  <div class="header">
+  <header class="header">
     <div class="top-bar">
       <div class="container">
         <div class="top-bar-height d-flex justify-content-end align-items-center">
@@ -17,34 +17,44 @@
     </div>
     <div class="container">
       <nav class="d-flex align-items-center justify-content-between">
-        <div class="nav-links">
-          <ul class="d-flex">
-            <li>
-              <router-link to="/" active-class="active" exact>Home</router-link>
-            </li>
-            <li>
-              <router-link to="/about" active-class="active">About</router-link>
-            </li>
-            <li>
-              <router-link to="/history" active-class="active">History</router-link>
-            </li>
-            <li>
-              <router-link to="/gallery" active-class="active">Gallery</router-link>
-            </li>
-            <li>
-              <router-link to="/contact" active-class="active">Contact</router-link>
-            </li>
-          </ul>
+        <a
+          role="button"
+          @click="toggleMobileNav"
+          @keydown="toggleMobileNav"
+          id="navicon"
+          tabindex="0"
+          v-html="naviconText"
+        ></a>
+        <div class="nav-links" ref="navLinks">
+          <div class="h-100">
+            <ul class="d-flex">
+              <li>
+                <router-link to="/" active-class="active" exact @click.native="toggleMobileNav" @keydown.enter="toggleMobileNav">Home</router-link>
+              </li>
+              <li>
+                <router-link to="/about" active-class="active" @click.native="toggleMobileNav" @keydown.enter="toggleMobileNav">About</router-link>
+              </li>
+              <li>
+                <router-link to="/history" active-class="active" @click.native="toggleMobileNav" @keydown.enter="toggleMobileNav">History</router-link>
+              </li>
+              <li>
+                <router-link to="/gallery" active-class="active" @click.native="toggleMobileNav" @keydown.enter="toggleMobileNav">Gallery</router-link>
+              </li>
+              <li>
+                <router-link to="/contact" active-class="active" @click.native="toggleMobileNav" @keydown.enter="toggleMobileNav">Contact</router-link>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="logo">
-          <router-link to="/" exact class="d-flex align-items-center">
+          <router-link to="/" exact>
             <img src="../assets/images/logo.png" alt="DG Welding">
           </router-link>
         </div>
       </nav>
     </div>
     <div class="header-border"></div>
-  </div>
+  </header>
 </template>
 
 <script>
@@ -56,6 +66,37 @@ export default {
   components: {
     EmailIcon,
     FacebookIcon
-  }
+  },
+  data() {
+    return {
+      isMobileNavOpen: false,
+      naviconClosed: '☰',
+      naviconOpen: '&times;',
+    }
+  },
+  methods: {
+    toggleMobileNav() {
+      if (this.isMobileNavOpen) {
+        this.closeMobileNav();
+      } else {
+        this.$refs.navLinks.classList.add('open');
+        this.isMobileNavOpen = true;
+      }
+    },
+    closeMobileNav() {
+      console.log('hello?')
+      this.$refs.navLinks.classList.remove('open');
+      this.isMobileNavOpen = false;
+    },
+  },
+  computed: {
+    naviconText() {
+      if (this.isMobileNavOpen) {
+        return this.naviconOpen;
+      } else {
+        return this.naviconClosed;
+      }
+    }
+  },
 }
 </script>

@@ -52,39 +52,80 @@ html {
   nav {
     position: relative;
     height: 100px;
-    li {
-      margin-right: 30px;
-      margin-bottom: 0;
-      a {
-        color: $gray-80;
-        font-weight: 500;
-        font-size: 24px;
-        border-bottom: 2px solid transparent;
-        padding-bottom: 4px;
-        &:hover {
-          color: $color-1;
-          border-bottom: 2px solid $color-1;
-        }
-        &.active {
-          border-color: $gray-80;
-          &:hover {
-            color: $gray-80;
-          }
-        }
-      }
-      &:last-child {
-        margin-right: 0;
+    #navicon {
+      display: none;
+      @media #{$mxw-md} {
+        position: relative;
+        display: block;
+        font-size: 40px;
+        cursor: pointer;
+        z-index: 999;
       }
     }
   }
   .bold { font-weight: bold; }
   .italic { font-style: italic; }
-  .logo, a {
-    height: 100%;
+  .nav-links {
+    li {
+      margin-right: 30px;
+      margin-bottom: 0;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+    a {
+      height: 100%;
+      color: $gray-80;
+      font-weight: 500;
+      font-size: 24px;
+      border-bottom: 2px solid transparent;
+      padding-bottom: 4px;
+      &:hover {
+        color: $color-1;
+        border-bottom: 2px solid $color-1;
+      }
+      &.active {
+        border-color: $gray-80;
+        &:hover {
+          color: $gray-80;
+        }
+      }
+    }
+    // .nav-links
+    @media #{$mxw-md} {
+      position: fixed;
+      width: 100vw;
+      height: 100vh;
+      top: 0;
+      left: -100vw;
+      background-color: #fff;
+      z-index: 99;
+      @include transition;
+      &.open {
+        left: 0;
+      }
+      ul {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        flex-direction: column;
+      }
+      li {
+        margin-bottom: 20px;
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+  .logo {
+    position: relative;
+    display: flex;
+    max-height: 80%;
+    z-index: 9999;
     img {
-      max-height: 80%;
-      width: auto;
-      position: relative;
+      width: 100px;
     }
   }
   .btn {
@@ -102,7 +143,9 @@ html {
   }
   .header {
     .top-bar {
+      position: relative;
       background-color: $gray-70;
+      z-index: 9999;
       a {
         color: $white;
         padding: 0;
@@ -147,8 +190,8 @@ html {
       z-index: 9;
       transition: $tran4;
       text-shadow: 0 0 20px $gray-80;
-      .heading-a { line-height: 64px; }
-      .heading-b { line-height: 28px; }
+      .heading-a { line-height: 1.05; }
+      .heading-b { line-height: 1.05; }
     }
   }
   .content {
@@ -238,7 +281,7 @@ html {
     }
   }
 
-  $arrow-position: -2.5rem;
+  $arrow-position: -26px;
 
   .swiper-button-prev {
     left: $arrow-position;
@@ -277,6 +320,30 @@ html {
   .carousel-wrapper.gallery {
     max-width: 800px;
     margin: auto;
+  }
+
+  #contact {
+    .flex-grid {
+      @include flex-grid(2, 30px);
+      @media #{$mxw-md} {
+        @include flex-grid(1, 0px);
+      }
+    }
+    .contact-wrap {
+      @media #{$mxw-md} {
+        margin-bottom: 30px;
+      }
+    }
+    .map-wrap {
+      position: relative;
+      min-height: 280px;
+      .loading {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
   }
 
   .footer {

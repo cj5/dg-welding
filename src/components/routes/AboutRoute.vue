@@ -1,13 +1,15 @@
 <template>
   <div class="about">
     <img src="../../assets/images/ribbon-1.jpg" alt="" class="pb-6">
-    <div class="container content pb-8">
-      <h2 class="mb-4">About</h2>
-      <p>DG Welding &amp; Mfg. is a private, family owned welding and steel fabrication shop based in Eagan, Minnesota.</p>
-      <p>With over 40 years of service to the Twin Cities and surrounding areas, we
-      provide structural steel, miscellaneous and ornamental welding and manufacturing on site and in house.</p>
-      <p>Our range of skills and experience in the construction industry has provided us with the knowledge to aid in any project steel related.</p>
-      <p>With no job too big or too small, DG offers a variety of services to fit most diverse contracting, residential or custom needs.</p>
+    <div class="container">
+      <div class="content pb-8">
+        <h2 class="mb-4">About</h2>
+        <p>DG Welding &amp; Mfg. is a private, family owned welding and steel fabrication shop based in Eagan, Minnesota.</p>
+        <p>With over 40 years of service to the Twin Cities and surrounding areas, we
+        provide structural steel, miscellaneous and ornamental welding and manufacturing on site and in house.</p>
+        <p>Our range of skills and experience in the construction industry has provided us with the knowledge to aid in any project steel related.</p>
+        <p>With no job too big or too small, DG offers a variety of services to fit most diverse contracting, residential or custom needs.</p>
+      </div>
     </div>
 
     <div class="border-top"></div>

@@ -56,6 +56,31 @@ $fz-xxxl: $fz-base * 3.75; // 60px
 .fz-xxl { font-size: $fz-xxl; }
 .fz-xxl { font-size: $fz-xxl; }
 
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// BREAKPOINTS
+$bp-xl: 1200px;
+$bp-lg: 992px;
+$bp-md: 768px;
+$bp-sm: 576px;
+$bp-xs: 420px;
+$bp-xxs: 370px;
+
+// %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+// MEDIA QUERIES
+$mxw-xl: '(max-width: #{$bp-xl - 1})';
+$mxw-lg: '(max-width: #{$bp-lg - 1})';
+$mxw-md: '(max-width: #{$bp-md - 1})';
+$mxw-sm: '(max-width: #{$bp-sm - 1})';
+$mxw-xs: '(max-width: #{$bp-xs - 1})';
+$mxw-xxs: '(max-width: #{$bp-xxs - 1})';
+
+$mnw-xxs: '(min-width: #{$bp-xxs})';
+$mnw-xs: '(min-width: #{$bp-xs})';
+$mnw-sm: '(min-width: #{$bp-sm})';
+$mnw-md: '(min-width: #{$bp-md})';
+$mnw-lg: '(min-width: #{$bp-lg})';
+$mnw-xl: '(min-width: #{$bp-xl})';
+
 // ===========================
 // borders
 $border: 2px solid $gray-30;
